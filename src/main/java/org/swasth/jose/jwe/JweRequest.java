@@ -1,3 +1,5 @@
+package org.swasth.jose.jwe;
+
 import com.nimbusds.jose.*;
 import com.nimbusds.jose.crypto.RSADecrypter;
 import com.nimbusds.jose.crypto.RSAEncrypter;

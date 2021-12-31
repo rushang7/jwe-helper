@@ -1,4 +1,4 @@
-package experiment;
+package org.swasth.jose.jwe.experiment;
 
 import org.jose4j.jwa.AlgorithmConstraints;
 import org.jose4j.jwe.ContentEncryptionAlgorithmIdentifiers;
@@ -24,7 +24,7 @@ class Jose4JExperiment {
         keys = new KeyPair[numberOfKeys];
         KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
         keyPairGenerator.initialize(keysize);
-        for(int i = 0; i < numberOfKeys; i++) {
+        for (int i = 0; i < numberOfKeys; i++) {
             keys[i] = keyPairGenerator.generateKeyPair();
         }
     }

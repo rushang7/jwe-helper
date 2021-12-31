@@ -1,4 +1,4 @@
-package key;
+package org.swasth.jose.jwe.key;
 
 import org.bouncycastle.util.io.pem.PemObject;
 import org.bouncycastle.util.io.pem.PemReader;

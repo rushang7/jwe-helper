@@ -1,4 +1,4 @@
-package key;
+package org.swasth.jose.jwe.key;
 
 import org.bouncycastle.util.io.pem.PemObject;
 import org.bouncycastle.util.io.pem.PemReader;
@@ -6,7 +6,10 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.security.KeyFactory;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
@@ -46,7 +49,7 @@ class PublicKeyLoaderExperiment {
     }
 
     @Test
-    public void loadPublicKeyFromCertificateFile() throws NoSuchAlgorithmException, IOException, InvalidKeySpecException, CertificateException {
+    public void loadPublicKeyFromCertificateFile() throws IOException, CertificateException {
 
         FileReader fileReader = new FileReader(getFile(filePathToSelfSignedCertificate));
         PemReader pemReader = new PemReader(fileReader);
