@@ -43,12 +43,4 @@ class PrivateKeyLoaderTest {
         System.out.println(rsaPrivateKey);
     }
 
-    @Test
-    void loadRSAPrivateKeyFromPemURL() throws IOException, NoSuchAlgorithmException, InvalidKeySpecException {
-        URL url = new URL("https://raw.githubusercontent.com/rushang7-eGov/jwe-helper/master/src/test/resources/x509" +
-                "-private-key.pem");
-        RSAPrivateKey rsaPrivateKey = PrivateKeyLoader.loadRSAPrivateKeyFromPem(url);
-        System.out.println(rsaPrivateKey);
-    }
-
 }

@@ -3,7 +3,6 @@ package org.swasth.jose.jwe.key;
 import org.bouncycastle.util.io.pem.PemReader;
 
 import java.io.*;
-import java.net.URL;
 import java.security.KeyFactory;
 import java.security.NoSuchAlgorithmException;
 import java.security.interfaces.RSAPrivateKey;
@@ -26,9 +25,9 @@ public class PrivateKeyLoader {
         return loadRSAPrivateKeyFromPem(fileReader);
     }
 
-    public static RSAPrivateKey loadRSAPrivateKeyFromPem(URL url) throws IOException, NoSuchAlgorithmException, InvalidKeySpecException {
-        Reader reader = new InputStreamReader(url.openStream());
-        return loadRSAPrivateKeyFromPem(reader);
+    public static RSAPrivateKey loadRSAPrivateKeyFromPem(String string) throws IOException, NoSuchAlgorithmException,
+            InvalidKeySpecException {
+        return loadRSAPrivateKeyFromPem(new StringReader(string));
     }
 
 }
