@@ -78,6 +78,9 @@ class JweRequestTest {
 
     @Test
     public void testEncrypt() throws JOSEException, ParseException {
+        System.out.println("Provided Header: " + headers);
+        System.out.println("Provided Payload: " + payload);
+
         JweRequest jweRequest = new JweRequest(headers, payload);
         jweRequest.encryptRequest((RSAPublicKey) keyPair.getPublic());
         encryptedObject = jweRequest.getEncryptedObject();
