@@ -70,10 +70,10 @@ class JweRequestTest {
 
     private void initContent() {
         headers = new HashMap<>();
-        headers.put("headerKey", "value");
+        headers.put("headerKey", "headerValue");
 
         payload = new HashMap<>();
-        payload.put("payloadKey", "payload");
+        payload.put("key", "value");
     }
 
     @Test

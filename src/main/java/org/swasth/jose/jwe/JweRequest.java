@@ -79,7 +79,7 @@ public class JweRequest {
         jweObject.decrypt(jweDecrypter);
 
         this.headers = jweObject.getHeader().toJSONObject();
-        this.payload = jweObject.getPayload().toJSONObject();
+        this.payload = new HashMap<>(jweObject.getPayload().toJSONObject());
     }
 
 }
