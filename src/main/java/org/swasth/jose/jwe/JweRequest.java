@@ -12,7 +12,7 @@ import java.text.ParseException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class JweRequest {
+public class JweRequest implements JweRequestInterface {
 
     public static final JWEAlgorithm KEY_MANAGEMENT_ALGORITHM = JWEAlgorithm.RSA_OAEP_256;
     public static final EncryptionMethod CONTENT_ENCRYPTION_ALGORITHM = EncryptionMethod.A256GCM;
